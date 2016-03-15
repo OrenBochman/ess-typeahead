@@ -1,0 +1,21 @@
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-typeahead-input/paper-typeahead-input.html">
+<link rel="import" href="/bower_components/get-field/get-field.html">
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<!--
+`<ess-typeahead></ess-typeahead>`
+-->
+
+<dom-module id="ess-typeahead">
+<template>
+<iron-ajax auto url="https://essentialhotels.co.uk/index.json" handle-as="json" last-response="{{data}}"></iron-ajax>
+<get-field data="{{data}}" field="value" output="{{_output}}"></get-field>
+<paper-typeahead-input style=display:inline-block flex input-value="{{search}}" placeholder="Tell me what you are looking for ..." local-candidates={{_output}}></paper-typeahead-input><paper-button on-tap="press">search</paper-button>
+</template>
+</dom-module>
+<script>
+Polymer({
+  is: "ess-typeahead"
+})
+</script>
