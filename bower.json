@@ -1,0 +1,17 @@
+{
+  "name": "ess-typeahead",
+  "version": "1.0.0",
+  "description": "paper-input",
+  "main": "ess-typeahead.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "*",
+    "iron-ajax": "PolymerElements/iron-ajax#9523d37680",
+    "get-field": "marcus7777/get-field#744c7964e7",
+    "paper-typeahead-input": "cheonhyangzhang/paper-typeahead-input#1ec88ed5bf",
+    "paper-button": "PolymerElements/paper-button#~1.0.11"
+  }
+}
